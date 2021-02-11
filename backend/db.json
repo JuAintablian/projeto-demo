@@ -1,3 +1,24 @@
 {
-  "produto": []
+  "produto": [
+    {
+      "nome": "Rogério",
+      "preco": "1000",
+      "id": 1
+    },
+    {
+      "nome": "Rogério",
+      "preco": "1000",
+      "id": 2
+    },
+    {
+      "nome": "Leo",
+      "preco": "1,00",
+      "id": 3
+    },
+    {
+      "nome": "Hernandes",
+      "preco": "10000",
+      "id": 4
+    }
+  ]
 }
