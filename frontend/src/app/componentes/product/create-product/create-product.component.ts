@@ -1,6 +1,7 @@
 import { Product } from './../../../model/product';
 import { ProductsService } from './../../../core/products.service';
 import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 @Component({
   selector: 'app-create-product',
@@ -9,23 +10,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CreateProductComponent implements OnInit {
 
-  product: Product = {
-    nome: '',
-    preco: null
-  }
+  productForm: FormGroup;
 
-  constructor(private productService: ProductsService) { }
+  constructor(private productService: ProductsService, private fb: FormBuilder) { }
 
   ngOnInit(): void {
+    this.createForm();
+  }
+
+  createForm() {
+    this.productForm = this.fb.group({
+      nome: [null],
+      preco: [null]
+    });
   }
 
   adicionarProduto() {
-    this.productService.criar(this.product).subscribe(data => {
-      console.log(data)
-      this.product.nome = ''
-      this.product.preco = ''
-      
-    })
+    const product = this.productForm.value;
+
+    this.productService.criar(product).subscribe(data => {
+      console.log(data);
+    });
   }
 
 }

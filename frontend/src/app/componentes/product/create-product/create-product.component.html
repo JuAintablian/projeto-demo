@@ -1,11 +1,11 @@
 <mat-card>
   <mat-card-title>Novo Produto</mat-card-title>
-  <form>
+  <form [formGroup]="productForm">
     <mat-form-field>
-      <input matInput [(ngModel)]="product.nome" placeholder="Nome do produto" name="nome">
+      <input matInput formControlName="nome" placeholder="Nome do produto" name="nome">
     </mat-form-field>
     <mat-form-field>
-      <input matInput [(ngModel)]="product.preco" placeholder="Preço (R$)" name="preco">
+      <input matInput formControlName="preco" placeholder="Preço (R$)" name="preco">
     </mat-form-field>
   </form>
   <button mat-raised-button color="primary" (click)="adicionarProduto()">
