@@ -21,6 +21,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ProductCrudComponent } from './componentes/product/product-crud/product-crud.component';
 import { ReadProductComponent } from './componentes/product/read-product/read-product.component';
 import { MatTableModule } from '@angular/material/table';
+import { ProductDeleteComponent } from './componentes/product/product-delete/product-delete.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +31,8 @@ import { MatTableModule } from '@angular/material/table';
     NavComponent,
     CreateProductComponent,
     ProductCrudComponent,
-    ReadProductComponent
+    ReadProductComponent,
+    ProductDeleteComponent
   ],
   imports: [
     BrowserModule,

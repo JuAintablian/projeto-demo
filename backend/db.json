@@ -1,16 +1,6 @@
 {
   "produto": [
     {
-      "nome": "Rogério",
-      "preco": "1000",
-      "id": 1
-    },
-    {
-      "nome": "Rogério",
-      "preco": "1000",
-      "id": 2
-    },
-    {
       "nome": "Leo",
       "preco": "1,00",
       "id": 3
@@ -24,6 +14,16 @@
       "nome": "Produto teste",
       "preco": "5000",
       "id": 5
+    },
+    {
+      "nome": "Leonardo",
+      "preco": "1,00",
+      "id": 6
+    },
+    {
+      "nome": "Leonardo 2",
+      "preco": "2,00",
+      "id": 7
     }
   ]
 }

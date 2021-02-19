@@ -33,10 +33,6 @@ export class ReadProductComponent implements OnInit {
     console.log(`Editar item ${id}`);
   }
 
-  delete(id) {
-    console.log('Delete item' + id);
-  }
-
   redirectToCreate() {
     this.route.navigate(['produto/create']);
   }
