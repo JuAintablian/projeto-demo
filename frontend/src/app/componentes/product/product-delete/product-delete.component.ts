@@ -20,7 +20,7 @@ export class ProductDeleteComponent implements OnInit {
     const id = +this.route.snapshot.paramMap.get('id')
     this.productService.getById(id).subscribe((product: Product) => {
       this.product = product
-      console.log(this.product);
+      console.log(this.product)
     })
   }
 
