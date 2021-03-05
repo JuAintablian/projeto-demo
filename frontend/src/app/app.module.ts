@@ -23,6 +23,7 @@ import { ReadProductComponent } from './componentes/product/read-product/read-pr
 import { MatTableModule } from '@angular/material/table';
 import { ProductDeleteComponent } from './componentes/product/product-delete/product-delete.component';
 import { ProductEditComponent } from './componentes/product/product-edit/product-edit/product-edit.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { ProductEditComponent } from './componentes/product/product-edit/product
     ProductCrudComponent,
     ReadProductComponent,
     ProductDeleteComponent,
-    ProductEditComponent
+    ProductEditComponent,
+    HomeComponent
   ],
   imports: [
     BrowserModule,

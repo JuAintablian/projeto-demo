@@ -1,4 +1,5 @@
-import { ActivatedRoute } from '@angular/router';
+import { FormGroup } from '@angular/forms';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Product } from './../../../../model/product';
 import { ProductsService } from 'src/app/core/products.service';
@@ -16,7 +17,8 @@ export class ProductEditComponent implements OnInit {
   }
 
   constructor(private productService: ProductsService,
-              private route: ActivatedRoute) { }
+              private route: ActivatedRoute,
+              private router: Router) { }
 
   ngOnInit(): void {
    const id = +this.route.snapshot.paramMap.get('id')
@@ -30,11 +32,16 @@ export class ProductEditComponent implements OnInit {
     })
   }
 
-  editProduct() {
+  editProduct(form) {    
+    // console.log(form);
     this.productService.editProduct(this.product).subscribe((product: Product) => {
       console.log(product);
-      
+      this.router.navigate(['/produto'])
     })
+  }
+
+  cancelOperation() {
+    this.router.navigate(['/produto'])
   }
 
 }

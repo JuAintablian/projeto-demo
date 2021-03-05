@@ -29,9 +29,9 @@ export class ReadProductComponent implements OnInit {
     });
   }
 
-  editar(id) {
-    console.log(`Editar item ${id}`);
-  }
+  // editar(id) {
+  //   console.log(`Editar item ${id}`);
+  // }
 
   redirectToCreate() {
     this.route.navigate(['produto/create']);

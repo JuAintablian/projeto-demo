@@ -1,14 +1,14 @@
 <!--<mat-card *ngIf="product" >-->
 <mat-card>
   <mat-card-title>Editar Produto</mat-card-title>
-  <form>
+  <form #form="ngForm" (ngSubmit)="editProduct(form)">
       <mat-form-field>
-        <input matInput [(ngModel)]="product.nome" placeholder="Nome" name="nome">
+        <input matInput [(ngModel)]="product.nome" required placeholder="Nome" name="nome">
       </mat-form-field>
       <mat-form-field>
-          <input matInput [(ngModel)]="product.preco" placeholder="Preço (R$)" name="preco">
+          <input matInput [(ngModel)]="product.preco" required placeholder="Preço (R$)" name="preco">
       </mat-form-field>
+      <button mat-raised-button color="primary" type="submit" [disabled]="form.invalid">Editar</button>
+      <button mat-raised-button (click)="cancelOperation()">Cancelar</button>
   </form>
-  <button mat-raised-button color="primary" (click)="editProduct()" >Editar</button>
-  <button mat-raised-button>Cancelar</button>
 </mat-card>

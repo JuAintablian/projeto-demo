@@ -6,9 +6,11 @@ import { ProductCrudComponent } from './componentes/product/product-crud/product
 import { ReadProductComponent } from './componentes/product/read-product/read-product.component';
 import { ProductDeleteComponent } from './componentes/product/product-delete/product-delete.component';
 import { ProductEditComponent } from './componentes/product/product-edit/product-edit/product-edit.component';
+import { HomeComponent } from './home/home.component';
 
 
 const routes: Routes = [
+  {path: '', component: HomeComponent},
   {
     path: 'produto',
     component: ProductCrudComponent,
